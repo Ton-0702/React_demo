@@ -1,10 +1,10 @@
 import React from "react";
 import PrimaryLayout from "../layout";
 
-const Dashboard = ({}) => {
+const Dashboard = () => {
     return (
         <PrimaryLayout>
-            
+        
         </PrimaryLayout>
     )
 }

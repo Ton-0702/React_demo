@@ -4,7 +4,7 @@ import Frame_big1_sidebar from "../../components/asset/Frame_big1_sidebar.svg";
 import ItemSideBar from "../ItemSideBar";
 
 const SideBarEleStyled = styled.div`
-    padding: 0px 20px;
+    padding: 0px 30px;
     height: 100%;
     
     .SideBarEleNameText{
@@ -23,6 +23,7 @@ const SideBarEleStyled = styled.div`
 
     .SideBarEleName{
         margin-top: 20px;
+        margin-bottom: 80px;
         display: flex;
         /* justify-content: space-between; */
         img{
@@ -30,6 +31,12 @@ const SideBarEleStyled = styled.div`
             width: 60px;
             margin-right: 20px;
         }
+    }
+
+    .SideBarEleNewTag{
+        font-size: 20px;
+        margin-top: 50px;
+        font-weight: 500;
     }
 `
 // const SideBarEleNavStyled = styled.div`
@@ -43,7 +50,7 @@ const SideBarEleStyled = styled.div`
 //         }
 // `
 
-const SideBar = ({}) => {
+const SideBar = () => {
     return (
         <SideBarEleStyled>
             <div className="SideBarEleName">
@@ -60,6 +67,31 @@ const SideBar = ({}) => {
             path_web={"/market"}>Market</ItemSideBar>
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-eraser"}
             path_web={"/active-bids"}>Active Bids</ItemSideBar>
+
+            <div className="SideBarEleNewTag">
+                PROFILE
+            </div>
+
+            <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-tablets"}
+            path_web={"/active-bids"}>My Portfolio</ItemSideBar>
+            
+            <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-wallet"}
+            path_web={"/active-bids"}>Wallet</ItemSideBar>
+
+            <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-heart"}
+            path_web={"/active-bids"}>Favourites</ItemSideBar>
+
+            <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-clock"}
+            path_web={"/active-bids"}>History</ItemSideBar>
+
+            <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-cog"}
+            path_web={"/active-bids"}>Settings</ItemSideBar>
+
+            <div className="SideBarEleNewTag">
+                OTHER
+            </div>
+
+
         </SideBarEleStyled>
     )
 }
