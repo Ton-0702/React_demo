@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import Header from "../header";
 // import Frame_big1_sidebar from "../../components/asset/Frame_big1_sidebar.svg"
-import SideBar from "../sidebar";
+import SideBar from '../sidebar';
 
 const LayoutStyled = styled.div`
     background-color: rgb(140, 221, 194);

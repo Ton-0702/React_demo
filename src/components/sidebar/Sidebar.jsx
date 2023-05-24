@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Frame_big1_sidebar from "../../components/asset/Frame_big1_sidebar.svg";
+import Frame_big1_sidebar from "../asset/Frame_big1_sidebar.svg";
 // import Icon_sidebar1 from "../../components/asset/Icon_sidebar1.svg";
-import ItemSideBar from "../ItemSideBar";
+import ItemSideBar from '../ItemSideBar';
 
 const SideBarEleStyled = styled.div`
     padding: 0px 30px;
@@ -90,7 +90,8 @@ const SideBar = () => {
             <div className="SideBarEleNewTag">
                 OTHER
             </div>
-
+            <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-cloud-moon"}
+            path_web={"/active-bids"} toogle={"True"}>Light Mode</ItemSideBar>
 
         </SideBarEleStyled>
     )

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
+import Toogle from "../toogle";
 
 const SideBarTextNav = styled.div`
     display: flex;
@@ -24,6 +25,7 @@ const StyledNavItem = styled.div`
     a {
         text-decoration: unset;
         color: #7A797D;
+        margin-right: 9px;
     }
   
 `;
@@ -32,18 +34,19 @@ const StyledNavItem = styled.div`
 
 // }
 
-const NavItem = ({text, path, src_font_awe}) => {
+const NavItem = ({text, path, src_font_awe, toogle}) => {
     return (
         <StyledNavItem>
             <NavLink to={path}>
                 <i className={src_font_awe}></i>
                 {text}
             </NavLink>
+           {toogle ==="True" && (<Toogle></Toogle>)}
         </StyledNavItem>
     )
 }
 
-const ItemSideBar = ({font_size_img, font_size, children, font_awe, path_web, ...rest}) => {
+const ItemSideBar = ({font_size_img, font_size, children, font_awe, path_web, toogle, ...rest}) => {
     // console.log('font_size_img, ',font_size_img);
     // font_awe = font_awe.split(" ")[1]
     return <SideBarTextNav
@@ -52,7 +55,7 @@ const ItemSideBar = ({font_size_img, font_size, children, font_awe, path_web, ..
         font_awe = {font_awe.split(" ")[1]}
         {...rest}
         >
-        {<NavItem text={children} path={path_web} src_font_awe={font_awe}></NavItem>}
+        {<NavItem text={children} path={path_web} src_font_awe={font_awe} toogle={toogle}></NavItem>}
     </SideBarTextNav>
 
 }
