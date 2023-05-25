@@ -17,7 +17,7 @@ const StyledButton = styled.button`
   };
   `
 ;
-export const Button = ({ width, height, bgcolor, borderColor, borderRadius, textColor, fontSize, percent, children, ...rest }) => {
+const Button = ({ width, height, bgcolor, borderColor, borderRadius, textColor, fontSize, percent, children, ...rest }) => {
     console.log('children', children);
     return <StyledButton 
     percent={percent}
@@ -44,3 +44,5 @@ Button.defaultProps = {
     // borderRadius:40,
 
 };
+
+export default Button;

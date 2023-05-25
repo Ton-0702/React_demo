@@ -5,7 +5,9 @@ import Toogle from "../toogle";
 const SideBarTextNav = styled.div`
     display: flex;
     margin-top: 40px;
-    color: #7A797D;
+    margin-left: 30px;
+    margin-right:30px;
+    /* color: #7A797D; */
     font-size: ${props => `${props.font_size}px`};
     i{
         margin-right: 20px;
@@ -13,7 +15,7 @@ const SideBarTextNav = styled.div`
     }
     
     ${props => props.font_awe}{
-        color: #7A797D;
+        /* color: #7A797D; */
         margin-right: 20px;
     }
     
@@ -22,10 +24,11 @@ const SideBarTextNav = styled.div`
 const StyledNavItem = styled.div`
     display: flex;
     justify-content: space-between;
+    width: 100%;
     a {
         text-decoration: unset;
         color: #7A797D;
-        margin-right: 9px;
+        /* margin-right: 9px; */
     }
   
 `;
@@ -41,7 +44,9 @@ const NavItem = ({text, path, src_font_awe, toogle}) => {
                 <i className={src_font_awe}></i>
                 {text}
             </NavLink>
-           {toogle ==="True" && (<Toogle></Toogle>)}
+            <div>
+                {toogle ==="True" && (<Toogle></Toogle>)}
+            </div>
         </StyledNavItem>
     )
 }

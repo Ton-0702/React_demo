@@ -9,9 +9,10 @@ const ToogleButtonStyled = styled.button`
     border-radius: 50px;
     cursor: pointer;
     position: relative;
+    display: flex;
 
-    button:focus,
-    button:active { outline: none; }
+    /* button:focus,
+    button:active { outline: none; } */
 
     .circle{
         position: absolute;
@@ -21,15 +22,17 @@ const ToogleButtonStyled = styled.button`
         border-radius: 94px;
         left: 3px;
         top: 2px;
-    }
 
-    i{
+        i{
         position: absolute;
         color: #5429FF;
         font-size: 18px;
         left: 3px;
-        top: 3px;
+        top: 4px;
+        }
     }
+
+    
 
     ${props => props.on} {
         background-color: #52f352;
@@ -48,8 +51,8 @@ const ToogleButtonStyled = styled.button`
 const Toogle = () =>{
     const [on, setOnState] = useState(true);
     const toggle = () => setOnState(o => !o);
-    console.log("on: ", on);
-    console.log("setOnState: ",setOnState);
+    // console.log("on: ", on);
+    // console.log("setOnState: ",setOnState);
     return (
         <ToogleButtonStyled class={on ? 'on' : 'off'} on={on} onClick={toggle}> 
             <div className="circle">

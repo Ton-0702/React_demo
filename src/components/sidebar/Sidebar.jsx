@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import Frame_big1_sidebar from "../asset/Frame_big1_sidebar.svg";
+import Frame_big3_sidebar from "../asset/Frame_big3_sidebar.svg";
 // import Icon_sidebar1 from "../../components/asset/Icon_sidebar1.svg";
 import ItemSideBar from '../ItemSideBar';
 
 const SideBarEleStyled = styled.div`
-    padding: 0px 30px;
+    /* padding: 0px 30px;
     height: 100%;
+    position: absolute;
+    width: 82%; */
     
     .SideBarEleNameText{
         display: flex;
@@ -37,6 +40,11 @@ const SideBarEleStyled = styled.div`
         font-size: 20px;
         margin-top: 50px;
         font-weight: 500;
+    }
+
+    .SideBarEleBottom{
+        width: 228.9px;
+        height: 190px;
     }
 `
 // const SideBarEleNavStyled = styled.div`
@@ -73,25 +81,29 @@ const SideBar = () => {
             </div>
 
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-tablets"}
-            path_web={"/active-bids"}>My Portfolio</ItemSideBar>
+            path_web={"/"}>My Portfolio</ItemSideBar>
             
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-wallet"}
-            path_web={"/active-bids"}>Wallet</ItemSideBar>
+            path_web={"/"}>Wallet</ItemSideBar>
 
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-heart"}
-            path_web={"/active-bids"}>Favourites</ItemSideBar>
+            path_web={"/"}>Favourites</ItemSideBar>
 
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-clock"}
-            path_web={"/active-bids"}>History</ItemSideBar>
+            path_web={"/"}>History</ItemSideBar>
 
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-cog"}
-            path_web={"/active-bids"}>Settings</ItemSideBar>
+            path_web={"/"}>Settings</ItemSideBar>
 
             <div className="SideBarEleNewTag">
                 OTHER
             </div>
             <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-cloud-moon"}
-            path_web={"/active-bids"} toogle={"True"}>Light Mode</ItemSideBar>
+            path_web={"/"} toogle={"True"}>Light Mode</ItemSideBar>
+
+            <div className="SideBarEleNewTag">
+                <img src={Frame_big3_sidebar} alt="logo" />
+            </div>
 
         </SideBarEleStyled>
     )
