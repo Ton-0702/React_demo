@@ -1,3 +1,4 @@
 import Cart from "./Cart";
 import CardLinear from "./CardLinear";
-export default {Cart, CardLinear};
+import CardTrending from "./CardTrending";
+export default {Cart, CardLinear, CardTrending};

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const DivSearchStyled = styled.div`
-    width: 30%;
-    height: 35%;
+    width: 42%;
+    height: 36%;
     border: none;
     border-radius: 11px;
-    position: relative;
+    border-radius: 11px;
     /* background-color: red; */
     margin: auto 30px;
     position: relative;

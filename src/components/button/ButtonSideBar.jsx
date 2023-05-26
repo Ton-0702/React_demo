@@ -3,13 +3,13 @@ import styled from "styled-components";
 const StyledButtonSideBar = styled.button`
     display: flex;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: ${props => props.justify_content};
     align-items: center;
-    width: 233px;
-    height: 50px;
-    border: none;
+    width: ${props => `${props.width}px`};
+    height: ${props => `${props.height}px`};
+    border:  ${props => props.borderColor ? `1px solid ${props.borderColor}` : "none"};
     border-radius: 11px;
-    background: rgb(233, 233, 233);
+    background: ${props => props.bgcolor};
     color: black;
 
     i{
@@ -28,12 +28,13 @@ const StyledButtonSideBar = styled.button`
     }
 
     span{
-        font-size: 15px;
+        font-size: ${props => `${props.fontSize}px`};
         font-weight: bold;
+        color: ${props => props.textColor};
     }
 `;
 
-const ButtonSideBar = ({width, height, imgPic, borderColor, bgcolor_i, padding_i, color_i, borderRadius, textColor, fontSize, children, font_awe, font_awe2, ...rest}) => {
+const ButtonSideBar = ({width, height, imgPic, justify_content, borderColor, bgcolor, bgcolor_i, padding_i, color_i, borderRadius, textColor, fontSize, children, font_awe, font_awe2, ...rest}) => {
     // console.log("font_awe", font_awe.split(" ")[1]);
     return <StyledButtonSideBar
     width={width}
@@ -45,12 +46,15 @@ const ButtonSideBar = ({width, height, imgPic, borderColor, bgcolor_i, padding_i
     padding_i = {padding_i}
     borderRadius = {borderRadius}
     color_i ={color_i}
+    bgcolor= {bgcolor}
+    justify_content = {justify_content}
     {...rest}
     >
-        <div className="plus__i">
-            <i className={font_awe}></i>
-        </div>
-        
+        { font_awe &&
+            <div className="plus__i">
+                <i className={font_awe}></i>
+            </div>
+        }
         <span>{children}</span>
         {font_awe2 && <i class={font_awe2}></i>}
     </StyledButtonSideBar>

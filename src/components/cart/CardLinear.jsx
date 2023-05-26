@@ -88,7 +88,7 @@ const CardLinear = ({title, imgPic, check_title, font_size, content, font_size_t
             <img src={imgPic} alt="ETH_black" />
             <span className="span_text__img">ETH</span>
         </div>
-        <ButtonSideBar width={150} height={50} font_awe={"fas fa-plus"} bgcolor_i={"#5429FF"} padding_i={10} borderRadius={45} font_awe2={"fas fa-chevron-right"} textColor={"black"} bgcolor="#E9E9E9">Top Up Balance</ButtonSideBar>
+        <ButtonSideBar justify_content={"space-between"} font_size={13} width={180} height={50} font_awe={"fas fa-plus"} bgcolor_i={"#5429FF"} padding_i={10} borderRadius={45} font_awe2={"fas fa-chevron-right"} textColor={"black"} bgcolor="#E9E9E9">Top Up Balance</ButtonSideBar>
     </StyleCart>
 }
 

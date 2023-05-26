@@ -1,3 +1,3 @@
-import Button from './Button';
-import ButtonSideBar from './ButtonSideBar';
-export default {Button, ButtonSideBar};
+import {Button} from './Button'
+import ButtonSideBar from "./ButtonSideBar";
+export {Button, ButtonSideBar};

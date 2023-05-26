@@ -4,11 +4,11 @@ import Search from "../search";
 import search_img from "../asset/search_img.svg"
 
 const HeaderStyled = styled.div`
-  position: fixed;
   z-index: 99;
-  width: 73%;
-  height: 14%;
+  width: 100%;
+  height: 100%;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between ;
   align-items: center;
   /* background-color: aqua; */

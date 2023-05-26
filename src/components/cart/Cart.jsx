@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import Button from "../button";
-import { useState } from "react";
+import {Button} from "../button/Button";
 
 const StyleCart = styled.div`
     padding: 24px;
     background-color: white;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 16px;
      /* Text/color2 */
     color: #747475;
@@ -59,7 +58,7 @@ const StyleCart = styled.div`
     }
 `
 
-const Cart = ({title, amount, imgPic, content, percent, check_title, font_size, text, font_size_text, ...rest}) =>{
+const Cart = ({title, amount, imgPic, content, percent, font_size, text, check_title, font_size_text, ...rest}) =>{
     // const [onTitle, setOnTitle] = useState(false)
     return <StyleCart
         title = {title}
