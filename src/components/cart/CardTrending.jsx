@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const TrendingStyled = styled.div`
-    width: 348px;
+    width: 332px;
     height: 364px;
     background-color: white;
     border-radius: 16px;
@@ -17,7 +17,7 @@ const TrendingStyled = styled.div`
         .SpanName__Left{
             color: #27262E;
             font-size: 24px;
-            font-size: bold;
+            font-weight: bold;
         }
         
         .SpanName__Right{

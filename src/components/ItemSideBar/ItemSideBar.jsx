@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import Toogle from "../toogle";
+import { useState } from "react";
 
 const SideBarTextNav = styled.div`
     display: flex;
@@ -25,12 +26,21 @@ const StyledNavItem = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    a {
+    /* a {
         text-decoration: unset;
         color: #7A797D;
-        /* margin-right: 9px; */
     }
-  
+   */
+
+    .navItem_a{
+        text-decoration: unset;
+        color: #7A797D;
+    }
+
+   .onNavItem{
+        text-decoration: unset;
+        color: blue;
+   }
 `;
 
 // const toogleButton = (){
@@ -38,9 +48,12 @@ const StyledNavItem = styled.div`
 // }
 
 const NavItem = ({text, path, src_font_awe, toogle}) => {
+    const [navItem_a, setOnState] = useState(true);
+    const showNav = () => setOnState(o => !o);
+    console.log(document.getElementsByClassName("navItem_a"));
     return (
         <StyledNavItem>
-            <NavLink to={path}>
+            <NavLink to={path} className={navItem_a ? 'navItem_a' : 'onNavItem'} onClick={showNav}>
                 <i className={src_font_awe}></i>
                 {text}
             </NavLink>
@@ -54,6 +67,7 @@ const NavItem = ({text, path, src_font_awe, toogle}) => {
 const ItemSideBar = ({font_size_img, font_size, children, font_awe, path_web, toogle, ...rest}) => {
     // console.log('font_size_img, ',font_size_img);
     // font_awe = font_awe.split(" ")[1]
+
     return <SideBarTextNav
         font_size = {font_size}
         font_size_img = {font_size_img}

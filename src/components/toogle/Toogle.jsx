@@ -54,7 +54,7 @@ const Toogle = () =>{
     // console.log("on: ", on);
     // console.log("setOnState: ",setOnState);
     return (
-        <ToogleButtonStyled class={on ? 'on' : 'off'} on={on} onClick={toggle}> 
+        <ToogleButtonStyled className={on ? 'on' : 'off'} on={on} onClick={toggle}> 
             <div className="circle">
                 {/* <i class="fas fa-sun"></i> */}
                 <i class={on ? 'fas fa-sun' : 'far fa-moon'} ></i>

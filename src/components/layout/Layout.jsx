@@ -11,16 +11,21 @@ import Ethereum_ETH_sidebar1 from '../asset/Ethereum_ETH_sidebar1.svg';
 import Rectange_13 from '../asset/Rectangle_13.svg'
 import ButtonSideBar from "../button/ButtonSideBar";
 import EthereumBlue from "../asset/Ethereum-blue.svg"
-import CardTrending from "../cart/CardTrending";
-import monkey1 from "../asset/monkey1.svg"
-import trending_account_1 from "../asset/trending_account_1.svg"
-import diamondblack from "../asset/diamonblack.svg"
-import monkey2 from "../asset/monkey2.svg"
-import monkey3 from "../asset/monkey3.svg"
-import monkey4 from "../asset/monkey4.svg"
+import TrendingContent from "../trendingContent";
+import ListCreator from "../listCreator";
+// import CardTrending from "../cart/CardTrending";
+// import monkey1 from "../asset/monkey1.svg"
+// import trending_account_1 from "../asset/trending_account_1.svg"
+// import trending_account_2 from "../asset/trending_account_2.svg"
+// import diamondblack from "../asset/diamonblack.svg"
+// import monkey2 from "../asset/monkey2.svg"
+// import monkey3 from "../asset/monkey3.svg"
+// import monkey4 from "../asset/monkey4.svg"
+
+
 
 const BodyStyled = styled.body`
-    background-color: rgb(140, 221, 194);
+    /* background-color: rgb(140, 221, 194); */
     max-width: 1450px;
     margin: 0px auto;
 `
@@ -40,10 +45,11 @@ const LayoutStyled = styled.div`
 const SideBarRightStyled = styled.div`
     display: flex;
     flex-direction: column;
+    background-color: rgb(140, 221, 194);
     float: right;
     width: 80%;
-    height: 130px;
-    position: relative;
+    /* height: 130px; */
+    /* position: relative; */
     /* height: auto; */
 `
 
@@ -51,6 +57,7 @@ const SideBarStyled = styled.aside`
     background-color: whitesmoke;
     float: left;
     width: 20%;
+    padding: 0px 0px 158px 0;
     /* height: 100vh;
     position: relative; */
 
@@ -94,16 +101,20 @@ const SideBarStyled = styled.aside`
         width: 81%;
         border-radius: 40px;
     }
+
+    /* .navItem_a{
+        text-decoration: unset;
+        color: #7A797D;
+    } */
 `;
 
 const ContentStyled = styled.div`
-    position: absolute;
+    display: flex;
+    flex-direction: column;
     margin: 0px 30px;
-    top: 160px;
-    height: auto;
+    margin-top: 8px;
     width: 100%;
-    /* display: flex;
-    flex-direction: column; */
+    margin-bottom: 35px;
 `;
 
 const ContentOneStyled = styled.div`
@@ -158,16 +169,21 @@ const ContentOneStyled = styled.div`
 
 const ContentTrending = styled.div`
     /* margin-top: 30px; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     width: 100%;
 
     .ContentTrending__Left{
         float: left;
         width: 716px;
-        /* height: 354px; */
+    }
+
+    .ContentTrending__LeftNav{
+        width: 100%;
         display: flex;
+        -webkit-box-pack: justify;
         justify-content: space-between;
+        margin-bottom: 30px;
     }
 
     .ContentTrending__LeftTopLeft{
@@ -189,29 +205,34 @@ const ContentTrending = styled.div`
         /* line-height: 31px; */
     }
 
-    .ContentTrending__LeftBottom{
-        width: 716px;
-        display: grid;
-        grid-template-columns: auto auto;
-        gap:20px;
-        margin-top: 30px;
+    .ContentTrending__Right{
+        float: right;
+        width: 378px;
+        margin-right: 43px;
+        background-color: white;
+        border-radius: 16px;
+
+        .ContentTrending__Right__Content{
+            padding: 20px 24px;
+
+            .ContentTrending__RightName{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+            .spanContentTrending_RightName{
+                float: right;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 21px;
+                color: rgb(116, 116, 117);
+                margin-top: 6px;
+                }
+            }
+        }
         
     }
 `
-
-const trending_data = [
-    {
-        imgPic: monkey1,
-        name_imgTrend: "Ape In Love",
-        eval_img: "21,5K Likes",
-        imgAccount: trending_account_1,
-        name_account: "@johnti60",
-        nameBottom:"Current Bid",
-        imgBottom: diamondblack,
-        number: "9.10",
-        brand: "ETH"
-    }
-]
 
 
 const PrimaryLayout = () => {
@@ -230,89 +251,100 @@ const PrimaryLayout = () => {
                         </div>
                     </div>
 
-                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-th-large"} 
-                    path_web={"/"}>Dashboard</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-th-large"}
+                        path_web={"/"}>Dashboard</ItemSideBar>
                     <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-store"}
-                    path_web={"/market"}>Market</ItemSideBar>
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-eraser"}
-                    path_web={"/active-bids"}>Active Bids</ItemSideBar>
+                        path_web={"/market"}>Market</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-eraser"}
+                        path_web={"/active-bids"}>Active Bids</ItemSideBar>
 
                     <div className="SideBarEleNewTag">
                         PROFILE
                     </div>
 
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-tablets"}
-                    path_web={"/"}>My Portfolio</ItemSideBar>
-                    
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-wallet"}
-                    path_web={"/"}>Wallet</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-tablets"}
+                        path_web={"/"}>My Portfolio</ItemSideBar>
 
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-heart"}
-                    path_web={"/"}>Favourites</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-wallet"}
+                        path_web={"/"}>Wallet</ItemSideBar>
 
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-clock"}
-                    path_web={"/"}>History</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-heart"}
+                        path_web={"/"}>Favourites</ItemSideBar>
 
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-cog"}
-                    path_web={"/"}>Settings</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-clock"}
+                        path_web={"/"}>History</ItemSideBar>
+
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-cog"}
+                        path_web={"/"}>Settings</ItemSideBar>
 
                     <div className="SideBarEleNewTag">
                         OTHER
                     </div>
-                    <ItemSideBar font_size_img={25} font_size={20}  font_awe={"fas fa-cloud-moon"}
-                    path_web={"/"} toogle={"True"}>Light Mode</ItemSideBar>
+                    <ItemSideBar font_size_img={25} font_size={20} font_awe={"fas fa-cloud-moon"}
+                        path_web={"/"} toogle={"True"}>Light Mode</ItemSideBar>
 
                     <div className="SideBarEleBottom">
                         {/* <img src={Frame_big3_sidebar} alt="logo" /> */}
                         <CardLinear title={"Your Balance"} check_title={"center"} imgPic={Ethereum_ETH_sidebar1} font_size={15} font_size_text={37} content="1,034.02"></CardLinear>
                     </div>
-                    </SideBarStyled>
-                    <SideBarRightStyled>
-                        <Header></Header>
-                        <ContentStyled>
-                            <ContentOneStyled>
-                                <div className="ContentOneLeft">
-                                    <div className="ContentOneLeft__text">
-                                        <div>
-                                            <span className="spanOneLeft">Discover, Create and Sell Your Own NFT.</span>
-                                        </div>
-                                        <div className="ContentOneLeft__text2">
-                                            <ButtonSideBar bgcolor={"white"} width={150} height={50} textColor={"#5429FF"} justify_content={"center"}>Discover</ButtonSideBar>
-                                            <ButtonSideBar borderColor={"white"} bgcolor={"none"} width={150} height={50} textColor={"white"} justify_content={"center"}>Create</ButtonSideBar>
-                                        </div>
+                </SideBarStyled>
+                <SideBarRightStyled>
+                    <Header></Header>
+                    <ContentStyled>
+                        <ContentOneStyled>
+                            <div className="ContentOneLeft">
+                                <div className="ContentOneLeft__text">
+                                    <div>
+                                        <span className="spanOneLeft">Discover, Create and Sell Your Own NFT.</span>
+                                    </div>
+                                    <div className="ContentOneLeft__text2">
+                                        <ButtonSideBar bgcolor={"white"} width={150} height={50} borderRadius={30} textColor={"#5429FF"} justify_content={"center"}>Discover</ButtonSideBar>
+                                        <ButtonSideBar borderColor={"white"} bgcolor={"none"} width={150} height={50} borderRadius={30} textColor={"white"} justify_content={"center"}>Create</ButtonSideBar>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div className="ContentOneRight">
-                                    <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} amount="5.00" percent={12.3}></Cart>
-                                    <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} content="+14.00" percent={12.3}></Cart>
-                                    <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} amount="7.00" percent={0} ></Cart>
-                                    <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} amount="5.00" percent={-5}></Cart>
-                                </div>
+                            <div className="ContentOneRight">
+                                <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} amount="5.00" percent={12.3}></Cart>
+                                <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} content="+14.00" percent={12.3}></Cart>
+                                <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} amount="7.00" percent={0} ></Cart>
+                                <Cart title={"Revenue"} check_title={"left"} imgPic={EthereumBlue} amount="5.00" percent={-5}></Cart>
+                            </div>
 
-                            </ContentOneStyled>
+                        </ContentOneStyled>
 
-                            <ContentTrending>
-                                <div className="ContentTrending__Left">
+                        <ContentTrending>
+                            <div className="ContentTrending__Left">
+                                <div className="ContentTrending__LeftNav">
                                     <div className="ContentTrending__LeftTopLeft">
                                         Trending Auctions
                                     </div>
 
                                     <div className="ContentTrending__LeftTopRight">
-                                        <span style={{backgroundColor: "#dad5e8", padding:"0px 15px", borderRadius:"50px"}}>Art</span>
+                                        <span style={{ backgroundColor: "#dad5e8", padding: "0px 15px", borderRadius: "50px" }}>Art</span>
                                         <span>Music</span>
                                         <span>Collectibles</span>
                                         <span>Utility</span>
                                     </div>
                                 </div>
+                                <TrendingContent></TrendingContent>
+                            </div>
 
-                                <div className="ContentTrending__LeftBottom">
-                                    <CardTrending imgPic={monkey1} imgAccount={trending_account_1} name={"@johnti60"} nameBottom={"Current Bid"} imgBottom={diamondblack}></CardTrending>
-                                    <CardTrending imgPic={monkey1}></CardTrending>
+                            <div className="ContentTrending__Right">
+                                <div className="ContentTrending__Right__Content">
+                                    <div className="ContentTrending__RightName">
+                                        Top Creator
+                                        <span className="spanContentTrending_RightName">See All</span>
+                                    </div>
+                                    <ListCreator>
+
+                                    </ListCreator>
                                 </div>
-                            </ContentTrending>
-                        </ContentStyled>
-                    </SideBarRightStyled>
+                                
+                            </div>
+                        </ContentTrending>
+                    </ContentStyled>
+                </SideBarRightStyled>
             </LayoutStyled>
         </BodyStyled>
     )

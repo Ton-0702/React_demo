@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 const DivSearchStyled = styled.div`
     width: 42%;
-    height: 36%;
+    height: 50px;
     border: none;
     border-radius: 11px;
-    border-radius: 11px;
-    /* background-color: red; */
     margin: auto 30px;
     position: relative;
 
@@ -20,10 +18,10 @@ const DivSearchStyled = styled.div`
 
     .inputSearch{
         width: 100%;
-        height: 100%;
         font-size: 20px;
         border-radius: 11px;
         text-indent: 77px;
+        padding: 14px 0px;
     }
 `
 

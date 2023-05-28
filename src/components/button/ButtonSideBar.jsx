@@ -8,7 +8,7 @@ const StyledButtonSideBar = styled.button`
     width: ${props => `${props.width}px`};
     height: ${props => `${props.height}px`};
     border:  ${props => props.borderColor ? `1px solid ${props.borderColor}` : "none"};
-    border-radius: 11px;
+    border-radius: ${props => `${props.borderRadius}px`}; 
     background: ${props => props.bgcolor};
     color: black;
 

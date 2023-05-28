@@ -1,17 +1,14 @@
 import styled from "styled-components";
-import ButtonSideBar from "../button/ButtonSideBar";
+// import ButtonSideBar from "../button/ButtonSideBar";
 import Search from "../search";
 import search_img from "../asset/search_img.svg"
 
 const HeaderStyled = styled.div`
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between ;
-  align-items: center;
-  /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 22px 0px;
 
   .nav_info{
     display: flex;

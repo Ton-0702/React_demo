@@ -1,7 +1,7 @@
 import React from "react";
 // import '../../App.css';
 // import { Button } from 'components/button';
-import Cart from '../../components/cart';
+import Cart from "../../components/cart/Cart";
 import EthereumBlue from '../../components/asset/Ethereum-blue.svg'
 import styled from "styled-components";
 // import Home from ".";

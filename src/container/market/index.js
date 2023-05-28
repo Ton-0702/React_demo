@@ -1,2 +1,2 @@
-import Market from './Market'
+import Market from "./Market";
 export default Market;
